@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+
+}
+.start{
+    text-align: center;
+
+}
+.start img{
+    margin-top: 70px;
+    width: 200px;
+    height: 250px;
+}
+
+.start-text-2{
+    display: grid;
+    margin-top: 100px;
+}
+.start-text-2 a{
+    text-decoration: none;
+    font-size: 13px;
+    color: white;
+}
+
+.start-text-2 button{
+    font-size: 18px;
+    width: 250px;
+    height: 50px;
+    border: none;
+    background: white;
+    border-radius: 30px;
+    align-items: center;
+    margin: auto;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.signup{
+    width: 35%;
+    height: 50%;
+    margin: auto;
+    border: transparent;
+    margin-top: 40px;
+    background: rgba(245, 245, 245, 0.95);
+}
+
+.signup p{
+    padding-top: 25px;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.details{
+    display: grid;
+    margin: 30px 0;
+}
+
+.details input{
+    margin: 10px 30px;
+    height: 50px;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.access{
+    align-items: center;
+    text-align: center ;
+    margin-bottom: 25px;
+    padding-bottom: 40px;
+    display: grid;
+}
+
+.access a{
+    text-decoration: none;
+    margin-top: 5px;
+    color: black;
+}
+
+.access button{
+    width: 300px;
+    height: 50px;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+    border-radius: 25px;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 80px;
+}
+nav img{
+    width: 70px;
+    height: 70px;
+}
+
+nav a{
+    margin-right: 30px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+}
+
+.webBody{
+    text-align: center;
+    margin: auto;
+    margin-top: 200px;
+    width: 60%;
+}
+
+.webBody h1{
+    margin-bottom: 20px;
+}
+
+.webBody p{
+    font-size: 16px;
+}
