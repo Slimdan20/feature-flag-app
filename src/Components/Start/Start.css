@@ -6,7 +6,10 @@
 
 body{
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to right, #00c6ff, #0072ff);
+    background: linear-gradient(to right, #b3e5fc, #81d4fa);
+    color: black;
+
+   /* background: linear-gradient(to right, #00c6ff, #0072ff); */
 
 }
 .start{
@@ -100,7 +103,7 @@ body{
 }
 
 nav{
-    display: flex;
+   display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 80px;
@@ -114,7 +117,37 @@ nav a{
     margin-right: 30px;
     text-decoration: none;
     font-size: 20px;
-    color: white;
+    color: black;
+}
+
+.head{
+    display: flex;
+}
+
+.darkmode{
+    display: flex;
+    width: 90px;
+}
+
+.darkmode i{
+    font-size: 25px;
+}
+
+.second{
+    border: solid wheat 1px;
+    width: 55px;
+    border-radius: 15px;
+    cursor: pointer;
+    height: 28px;
+
+}
+
+.second i{
+    transition: 0.4s;
+}
+
+.second.active i{
+    transform: translateX(27px);
 }
 
 .webBody{
