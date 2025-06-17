@@ -1,0 +1,34 @@
+version: 2.1
+
+jobs:
+  build-and-deploy:
+    docker:
+      - image: cimg/node:22.16.0
+    steps:
+      - checkout
+
+      - run:
+          name: Install dependencies
+          command: npm install
+
+      - run:
+          name: Build React App
+          command: npm run build
+
+      - run:
+          name: Install Vercel CLI
+          command: npm install -g vercel
+
+      - run:
+          name: Deploy to Vercel
+          command: |
+            vercel --token=$VERCEL_TOKEN --prod --yes
+
+workflows:
+  version: 2
+  deploy_on_main:
+    jobs:
+      - build-and-deploy:
+          filters:
+            branches:
+              only: main
