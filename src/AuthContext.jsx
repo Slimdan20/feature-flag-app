@@ -1,4 +1,5 @@
 import { createContext, useContext, useState, useEffect } from "react";
+import flagsmith from "flagsmith";
 const AuthContext = createContext();
 
 export function AuthProvider({children}){
@@ -9,6 +10,12 @@ export function AuthProvider({children}){
         const storedUser = localStorage.getItem('user');
         if(storedUser){
             setUser(JSON.parse(storedUser));
+
+            const userData = JSON.parse(storedUser);
+            flagsmith.identify(userData.email, {
+                email: userData.email,
+                isDaneycorpsUser: userData.email.endsWith('@daneycorps.com')
+            });
         }
         setLoading(false);
     }, []);
@@ -16,6 +23,11 @@ export function AuthProvider({children}){
     const login = (userData) => {
         setUser(userData);
         localStorage.setItem('user', JSON.stringify(userData));
+
+        flagsmith.identify(userData.email, {
+            email: userData.email,
+            isDaneycorpsUser: userData.email.endsWith('@daneycorps.com')
+        });
     };
 
     const logout = () => {
