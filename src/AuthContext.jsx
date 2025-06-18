@@ -23,6 +23,11 @@ export function AuthProvider({children}){
     const login = (userData) => {
         setUser(userData);
         localStorage.setItem('user', JSON.stringify(userData));
+
+        flagsmith.identify(userData.email, {
+            email: userData.email,
+            isDaneycorpsUser: userData.email.endsWith('@daneycorps.com')
+        });
     };
 
     const logout = () => {
