@@ -39,7 +39,7 @@ const Navbar = () => {
         <a href="#">Home</a>
         <a href="#">About</a>
         <a href="#">Contact</a>
-        <a href="">Logout</a>
+        <a href="/Signup">Logout</a>
         {darkModeEnabled && (<div className='darkmode'>
         <div className='first'>
           < i className='bxr  bx-brightness-half'  ></i> 
